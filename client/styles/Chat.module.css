@@ -1,0 +1,133 @@
+.container {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    min-height: 92vh;
+}
+
+.header {
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1400px;
+    margin: auto;
+    border-bottom: 1px solid #d4d4d4;
+    background: cadetblue;
+    color: white;
+}
+
+.sidebar {
+    width: 35%;
+    background-color: beige;
+}
+
+.main {
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.messageForm {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+.chatSection {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatMessageSection {
+    overflow: auto;
+    flex: 1 1;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.message {
+    padding: 20px 20px;
+    width: 100%;
+    display: flex;
+}
+
+.messageContent {
+    background-color: #585897;
+    padding: 6px 9px 8px 9px;
+    color: white;
+    border: 1px solid #9f9c9c;
+    border-radius: 9px;
+    max-width: 70%;
+}
+
+.messageRight {
+    flex-direction: row-reverse;
+}
+
+.contactItem {
+    padding: 15px 20px;
+    border-bottom: 1px solid #c6c6c6;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.contactItem:hover {
+    cursor: pointer;
+    background: blanchedalmond;
+}
+
+.contactImg {
+    height: 40px;
+    width: 40px;
+    background: rgb(200 196 196);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.headerUserName {
+    font-weight: bold;
+}
+
+.hambarger {
+    display: none;
+}
+
+.headerTitle {
+    display: flex;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 960px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+    .sidebar {
+        position: absolute;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 75px;
+        width: 0;
+    }
+
+    .hambarger {
+        display: block;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .oppositeColor {
+        color: cadetblue;
+        transition: 0.5s;
+    }
+
+    .open {
+        width: 50%;
+    }
+}
